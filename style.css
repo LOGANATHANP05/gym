@@ -8,6 +8,7 @@
 body
 {
     overflow-x: hidden;
+    /* background-attachment: fixed; */
 }
 .grand-parent .parent
 {
@@ -27,9 +28,9 @@ body
 {
     display: flex;
 }
-body .grand-parent .parent .child-1
+.grand-parent .parent
 {
-    position:sticky;
+    position:fixed;
 }
 .child-1 .gymso 
 {
@@ -77,9 +78,11 @@ body .grand-parent .parent .child-1
     color: orangered;
 }
 @media(max-width:992px)
-
 {
-    .child-1
+    .grand-parent
+    {
+        overflow-x: hidden;
+    }
     .gymso
     {
         position: sticky;
@@ -114,10 +117,10 @@ body .grand-parent .parent .child-1
     background-repeat: no-repeat;
 
 }
-.parent-1 .parent1 
+.parent-1 .tn-47
 {
     /* height: 100vh; */
-    background-color: rgba(15, 14, 14, 0.7);
+    background-color: rgba(18, 17, 17, 0.7);
 }
 .parent-1 .child-2
 {
@@ -186,18 +189,12 @@ body .grand-parent .parent .child-1
     background-color: #181616;
     color: white;
     display: flex;
-    height: 50%;
     padding: 50px 0;
-    text-align: center;
     justify-content: center;
 }
 .parent-2 .left
 {
-    /* border: 1px solid white; */
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    flex-wrap: wrap;
+    /* justify-content: center; */ 
 }
 .left h4
 {
@@ -218,7 +215,7 @@ body .grand-parent .parent .child-1
 }
 .left button
 {
-    padding: 15px 105px;
+    padding: 15px 155px;
     font-weight: 900;
     color: white;
     background-color: orangered;
@@ -233,9 +230,9 @@ button:hover
 {
     margin-top: 40px;
     border-left: 2px solid #2d2c2c;
-    height: 195px;
+    height: 240px;
     padding-left: 20px;
-    margin-left: 50px;
+    /* padding-left: 80px; */
 }
 .right h1
 {
@@ -255,25 +252,40 @@ button:hover
 {
     padding-bottom: 15px;
 }
-@media(max-width:550px)
+@media(max-width:743px)
 {
     .parent-2
     {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        text-align: justify;
     }
 }
-
 .parent-3
 {
     width: 100vw;
-    display: flex;
+    /* display: flex; */
     padding: 70px 0;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     flex-wrap: wrap;
     background-color: #f6f4f4;
+}
+.parent-three
+{
+    width: 90vw;
+    /* border: solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;  
+    margin: 0 5vw;
+}
+.container-lt
+{
+    display: flex;
 }
 .parent-3 .set-1
 {
@@ -284,7 +296,6 @@ button:hover
 {
     padding-bottom: 20px;
     font-size: 40px;
-    padding-top: 90px;
 }
 .set-1 p
 {
@@ -303,17 +314,22 @@ button:hover
 {
     color: #e9460a;
 }
+.container-rt
+{
+    /* justify-content: space-evenly; */
+    display: flex;
+}
 .parent-3 .set-2
 {
-   height: 400px;
+   height: 360px;
    width: 300px;
    /* border: 1px solid black; */
    box-shadow: 0 0 15px;
-
+   margin-right: 20px;
 }
 .set-2 .yoga
 {
-    height: 340px;
+    height: 300px;
     /* border: 1px solid red; */
     background-image: url(team-image.jpg);
     background-size: cover;
@@ -340,14 +356,14 @@ i:hover
 }
 .parent-3 .set-3
 {
-   height: 400px;
+   height: 360px;
    width: 300px;
    /* border: 1px solid black; */
    box-shadow: 0 0 15px;
 }
 .set-3 .body
 {
-    height: 340px;
+    height: 300px;
     background-image: url(team-image01.jpg);
     background-size: cover;
     background-position: center;
@@ -381,6 +397,29 @@ h6:hover
 {
     color: #e9460a;
 }
+@media(max-width:992px)
+{
+    .parent-three
+    {
+        flex-direction: column;
+    }
+    .container-rt
+    {
+        margin-top: 20px;
+    }
+}
+@media(max-width:638px)
+{
+    .container-rt
+    {
+        flex-direction: column;
+    }
+    .set-3
+    {
+        margin-top: 20px;
+    }
+}
+
 
 .parent-4
 {
@@ -407,11 +446,12 @@ h6:hover
     justify-content: space-around;
     margin: 0 100px;
     margin-bottom: 50px;
+    /* flex-wrap: wrap; */
 }
 .parent-4 .in-1
 {
     height: 450px;
-    width: 350px;
+    /* width: 350px; */
     background-color: #f6f4f4;
 }
 .in-1 .out-1
@@ -424,7 +464,7 @@ h6:hover
 .parent-4 .in-2
 {
     height: 450px;
-    width: 350px;
+    /* width: 350px; */
     background-color: #f6f4f4;
 }
 .in-2 .out-2
@@ -437,7 +477,7 @@ h6:hover
 .parent-4 .in-3
 {
     height: 450px;
-    width: 350px;
+    /* width: 350px; */
     background-color: #f6f4f4;
 }
 .in-3 .out-3
@@ -488,37 +528,64 @@ h6:hover
 {
     display: flex;
 }
-/* .title
-{
-    grid-template:repeat(3,1fr)/repeat(1,3fr);
-} */
+
 @media(max-width:992px)
 {
     .title
     {
-       flex-wrap: wrap;
-       text-align: center;
+        column-gap: 20px;
+        text-align: justify;
     }
+}
+@media(max-width:1094px)
+{
+    .title p
+    {
+        font-size: 15px;
+    }
+    .title h3 
+    {
+        font-size: 12px;
+    }
+    .title
+    {
+        box-sizing: border-box;
+        column-gap: 20px;
+    }
+}
+@media(max-width:800px)
+{
+   .title
+   {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .title 
+   {
+    row-gap: 20px;
+   }
 }
 
 .parent-5
 {
     width: 100vw;
     background-color:black;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     color: white;
     padding-bottom: 50px;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding-left: 100px;
+
 }
 .table
 {
     display: table;
-    text-align: center;
     justify-content: center;
-    width: 60vw; 
-    margin: 0 280px;
+    align-items: center;
+    text-align: center;
 }
 .caption
 {
@@ -557,18 +624,36 @@ h6:hover
 .col
 {
     display: table-cell;
-    text-align:center;
     border: 1px solid #242323;
     text-align: center;
     /* padding: 0 20px ; */
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    padding: 15px 15px;
 }
 .table .hello
 {
     background-color: orangered;
     /* padding: 40px 40px; */
+}
+@media(max-width:992px)
+{
+    .parent-5
+    {
+        background-attachment: fixed;
+        /* background-color: #161616; */
+        background-color: cover;
+        overflow-x: scroll;
+    }
+    .table
+    {
+        background-attachment: fixed;
+        overflow-x: scroll;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .parent-6 
@@ -580,13 +665,10 @@ h6:hover
 {
     display: flex;
     margin: 80px 80px;
-
+    justify-content: space-evenly;
 }
 .parent-6 .container-left
 {
-    width: 50vw;
-    /* border-right: 1px solid red; */
-    margin-left: 100px;
     font-size: 28px;
 }
 .container-left input
@@ -613,10 +695,7 @@ h6:hover
 }
 .parent-6 .container-right
 {
-    width: 50vw;
     text-align: justify;
-    margin-left: 50px;
-    flex-wrap: wrap;
 }
 .container-right .find
 {
@@ -653,6 +732,13 @@ iframe
         text-align: center;
         justify-content: center;
     }
+    .parent-6
+    {
+        background-attachment: fixed;
+        /* background-color: #161616; */
+        background-color: cover;
+        overflow-x: scroll;
+    }
     .child-0
     {
        flex-wrap: wrap;
@@ -663,7 +749,7 @@ iframe
     } 
     .container-right
     {
-        padding-left: 20px;
+        /* padding-left: 20px; */
     }
 }
 
